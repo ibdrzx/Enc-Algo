@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P-Enc-Algo | Encrypt Password</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/encry.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="heading"><i class="fas fa-key"></i> Encrypt Your Password</h1>
+    <form id="encryptForm" novalidate>
+      <label for="email">Email Address <span class="required">*</span></label>
+      <input type="email" id="email" placeholder="your.email@example.com" required />
+
+      <label for="password">Password <span class="required">*</span></label>
+      <input type="text" id="password" placeholder="Enter your password" autocomplete="off" required />
+
+      <button type="submit" class="btn encrypt-btn"><i class="fas fa-lock"></i> Encrypt Password</button>
+    </form>
+
+    <section class="output-section">
+      <label for="encryptedPassword">Encrypted Password</label>
+      <textarea id="encryptedPassword" readonly></textarea>
+      <button id="copyBtn" class="btn btn-copy" title="Copy encrypted password"><i class="fas fa-copy"></i> Copy Encrypted Password</button>
+    </section>
+
+    <nav class="nav-links">
+      <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./decry.html"><i class="fas fa-unlock"></i> Decrypt Password</a>
+    </nav>
+  </main>
+
+  <!-- Custom JS -->
+  <script src="./js/encry.js"></script>
+</body>
+</html>
