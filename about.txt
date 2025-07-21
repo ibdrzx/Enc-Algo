@@ -1,0 +1,99 @@
+------------------------------------------------------------
+P-Enc-Algo: Custom Password Encryption Obfuscation Tool
+------------------------------------------------------------
+
+Author: [Your Name or Alias]
+Created: [Date]
+Contact: tell@ibdrzx.com
+Purpose: For personal use to encode passwords with a unique logic that 
+makes them look like real passwords but only the creator can decode them.
+
+============================================================
+📁 Project Structure
+============================================================
+
+index.html       → Home page with app purpose & feedback link.
+encrypt.html     → Tool for encrypting passwords using the custom algo.
+decrypt.html     → Tool for decrypting previously encoded passwords.
+about.txt        → You're reading this.
+
+============================================================
+🔐 Encryption Logic (Client-side only, uses JS)
+============================================================
+
+Input: 
+  - Email (e.g., ibjad@gmail.com)
+  - Password (e.g., Ibjad@23)
+
+Steps:
+1. EMAIL PROCESSING:
+   - Count characters before "@" → Chc{length}
+   - Check domain:
+     - If gmail.com or outlook.com → score = 4
+     - Else → score = 2
+   - Result: Chc5tE4 (where 5 is the username length, 4 is score)
+
+2. PASSWORD PROCESSING:
+   - Reverse the password → e.g., 32@dajbI
+   - Transform characters:
+     - Numbers → a=1, b=2, ..., i=9, j=10
+     - Letters → converted to numbers: a=1, b=2, ...
+     - 'o' → 0 (zero)
+     - '0' (zero) → O (capital letter O)
+     - All numbers are separated by 't' (like 4t1t10t2t9)
+   - Keep symbols like @ as-is
+   - Final format: cb@4t1t10t2t9
+
+3. OUTPUT:
+   Final encrypted password = Chc{len}tE{score}t{converted_password}IEA
+
+   Example:
+   Email: ibjad@gmail.com
+   Password: Ibjad@23
+   Encrypted: Chc5tE4tcb@4t1t10t2t9IEA
+
+============================================================
+🔓 Decryption Logic
+============================================================
+
+1. Input:
+   - Original email
+   - Encrypted password ending with 'IEA'
+
+2. Verification:
+   - Checks if `Chc{usernameLength}` and `E{score}` match email
+   - Removes "IEA" and splits encrypted content
+   - Decodes numbers back to letters, handles o/0 swap
+   - Reverses again to get the original password
+
+============================================================
+🎨 Styling
+============================================================
+
+- Dark theme UI for better readability
+- Red color used for encrypted/decrypted password display
+- Copy buttons to easily grab output
+- Responsive and accessible design using vanilla HTML/CSS/JS
+
+============================================================
+🛠 To Rebuild or Extend
+============================================================
+
+If you want to rework this in the future:
+
+- Logic is in JavaScript inside encrypt.html and decrypt.html
+- You can extract it into a `penc.js` and reuse the functions
+- You could add:
+  - Local storage for past records
+  - Option to export encrypted passwords to file
+  - Password strength estimator
+  - Settings toggle for customization
+
+============================================================
+📬 Feedback / Issues
+============================================================
+
+Send feedback or bug reports to:
+→ the.ibdrzx@gmail.com
+
+============================================================

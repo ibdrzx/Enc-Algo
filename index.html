@@ -2,60 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>P-Enc-Algo | Home</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #00ffc3;
-      margin-bottom: 1rem;
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
 
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #c0c0c0;
-    }
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    a {
-      color: #00ffc3;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #00ffc3;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    a:hover {
-      background-color: #00ffc3;
-      color: #121212;
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <h1>🔐 Welcome to P-Enc-Algo</h1>
-  <p>
-    This tool helps you transform your passwords into a disguised format
-    using a personal encryption method. Only you know how to decode it —
-    making it perfect for storing passwords safely in plain sight.
-  </p>
-  <a href="mailto:tell@ibdrzx.com">💬 Provide Feedback or Report a Bug</a>
+  <main class="container">
+    <section class="text-col">
+      <h1 class="heading"><i class="fas fa-lock"></i> Secure Your Passwords with P-Enc-Algo</h1>
+      <p class="description">
+        Make your own encrypted password with this super customised algorithm. All the passwords generated using this algorithm can be decrypted by you at any time, ensuring you never lose access. This tool never stores or transmits any of your data, giving you full control over your privacy and security. Use it confidently on any device, anywhere.
+      </p>
+      <p class="feedback">
+        Have feedback or want to report an issue? 
+        <a href="mailto:tell@ibdrzx.com" target="_blank" rel="noopener noreferrer">Send us an email</a>.
+      </p>
+      <div class="btn-group">
+        <a href="encry.html" class="btn">Encrypt Password</a>
+        <a href="decry.html" class="btn btn-secondary">Decrypt Password</a>
+      </div>
+    </section>
+
+    <section class="image-col">
+      <img id="randomImage" alt="Password and digital safety related" />
+    </section>
+  </main>
+
+  <!-- Custom JS -->
+  <script src="./js/home.js"></script>
 </body>
 </html>
-
